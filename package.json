@@ -1,0 +1,29 @@
+{
+  "name": "dexcom-api",
+  "version": "1.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/dexcom-api.umd.js",
+  "module": "./dist/dexcom-api.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/dexcom-api.es.js",
+      "require": "./dist/dexcom-api.umd.js"
+    }
+  },
+  "description": "API wrapper for interacting with the unofficial Dexcom API",
+  "author": "Elliot Dohm",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "2",
+    "node-fetch": "2",
+    "typescript": "^4.5.4",
+    "vite": "^2.7.9"
+  }
+}
