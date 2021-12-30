@@ -1,9 +1,13 @@
-export interface LoginProps {
+// In Dexcom terms, "eu" means everywhere not in the US.
+export type DexcomServer = "eu" | "us";
+
+export interface ConfigurationProps {
   username: string;
   password: string;
+  server: DexcomServer;
 }
 
-export interface LatestGloucoseProps {
+export interface LatestGlucoseProps {
   minutes: number;
   maxCount: number;
 }
@@ -25,7 +29,7 @@ export interface DexcomEntry {
   Trend: string;
 }
 
-export interface GloucoseEntry {
+export interface GlucoseEntry {
   mgdl: number;
   mmol: number;
   trend: string; // TODO: Better types
