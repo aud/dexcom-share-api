@@ -181,7 +181,7 @@ describe("DexcomClient", () => {
       const expectedResult = [
         {
           mgdl: 185,
-          mmol: 10.3,
+          mmol: 10.28,
           timestamp: 1640812425000,
           trend: "flat",
         }
