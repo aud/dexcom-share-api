@@ -1,3 +1,5 @@
+![CI status](https://github.com/aud/dexcom-api/actions/workflows/ci.yml/badge.svg)
+
 Lightweight JavaScript (incl. TypeScript support) wrapper for interacting with
 the Dexcom private API. This API is most commonly used for extracting realtime
 glucose data, as the official Dexcom API does not provide a realtime API.
