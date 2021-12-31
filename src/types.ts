@@ -29,9 +29,20 @@ export interface DexcomEntry {
   Trend: string;
 }
 
+export enum Trend {
+  DoubleUp,
+  SingleUp,
+  FortyFiveUp,
+  Flat,
+  FortyFiveDown,
+  SingleDown,
+  DoubleDown
+}
+
 export interface GlucoseEntry {
   mgdl: number;
   mmol: number;
-  trend: string; // TODO: Better types
+  // https://s3-us-west-2.amazonaws.com/dexcompdf/HCP_Website/LBL014261+G5+NA+advanced+treatment+decisions.pdf
+  trend: Trend;
   timestamp: number;
 }

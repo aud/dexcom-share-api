@@ -8,6 +8,7 @@ import type {
   DexcomServer,
   ConfigurationProps,
 } from "./types";
+import {Trend} from "./types";
 
 export class DexcomClient {
   private username: string;
@@ -133,11 +134,19 @@ export class DexcomClient {
       // The object Dexcom returns from this API is unnecessarily confusing, make
       // it clearer:
       return data.map((entry: DexcomEntry) => {
+        // Dexcom used to rank trends from 1-7 (1 = max raise, 7 = max drop)
+        // This recently changed to use human readable strings instead.
+        // Apparently this has not yet been updated on the "us" servers, so
+        // let's ensure we're compatible with both responses.
+        let trend = entry.Trend;
+        if (typeof trend === "number") {
+          trend = Trend[trend - 1];
+        }
+
         return {
           mmol: mgdlToMmol(entry.Value),
           mgdl: entry.Value,
-          // TODO: May need to handle US trends.. (still 1-7?)
-          trend: entry.Trend.toLowerCase(),
+          trend: trend.toLowerCase(),
           timestamp: new Date(extractNumber(entry.WT) as number).getTime(),
         }
       });

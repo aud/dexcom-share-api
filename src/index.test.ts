@@ -236,5 +236,45 @@ describe("DexcomClient", () => {
         }
       );
     });
+
+    it("handles converting numerical trends", async () => {
+      const client = new DexcomClient({username: "user", password: "pass", server: "eu"});
+
+      const fakeData = [
+        {
+          WT: "Date(1640812425000)",
+          ST: "Date(1640812425000)",
+          DT: "Date(1640812425000-0500)",
+          Value: 185,
+          Trend: 1, // doubleup
+        }
+      ]
+
+      const fakeUuid = "0f549f40-e164-41e9-bb43-cdd7f7006732";
+      const uuidJson = jest.fn();
+      uuidJson.mockResolvedValue(fakeUuid)
+
+      const json = jest.fn();
+      json.mockResolvedValue(fakeData)
+
+      const mockFetch = fetch;
+      mockFetch
+        .mockReturnValueOnce({ status: 200, json: uuidJson })
+        .mockReturnValueOnce({ status: 200, json: uuidJson })
+        .mockReturnValueOnce({ status: 200, json })
+
+      const result = await client.getEstimatedGlucoseValues();
+
+      const expectedResult = [
+        {
+          mgdl: 185,
+          mmol: 10.28,
+          timestamp: 1640812425000,
+          trend: "doubleup",
+        }
+      ]
+
+      expect(result).toStrictEqual(expectedResult);
+    });
   });
 });
