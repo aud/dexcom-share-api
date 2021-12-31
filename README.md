@@ -31,7 +31,7 @@ const client = new DexcomClient({
 // in order to generate a session. As a user, usually you wouldn't need to
 // call this function directly unless you're rebuilding the login flow
 // yourself.
-client.getAccountId().then(console.table)
+client.getAccountId().then(console.log)
 // b301bac4-4c7k-447a-a701-39e1046ab6ad
 
 // getSessionId()
@@ -39,7 +39,7 @@ client.getAccountId().then(console.table)
 // Returns the Dexcom session_id for a given account. This provides a token
 // that will allow access to various Dexcom APIs scoped under your account, for
 // eg. reading glucose data.
-client.getAccountId().then(console.table)
+client.getSessionId().then(console.log)
 // 2a97d246-49e7-467b-8616-03715cec9r51
 
 // getEstimatedGlucoseValues({minutes: 1440, maxCount: 1})
