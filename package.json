@@ -1,5 +1,5 @@
 {
-  "name": "dexcom-api",
+  "name": "@aud/dexcom-api",
   "version": "1.0.0",
   "files": [
     "dist"
@@ -18,7 +18,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc && vite build",
-    "test": "node_modules/.bin/jest --no-coverage"
+    "test": "jest --no-coverage"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.5",
@@ -34,5 +34,13 @@
     "tslib": "^2.3.1",
     "typescript": "^4.5.4",
     "vite": "^2.7.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aud/dexcom-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aud/dexcom-api/issues"
+  },
+  "homepage": "https://github.com/aud/dexcom-api#readme"
 }
