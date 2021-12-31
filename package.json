@@ -1,6 +1,6 @@
 {
   "name": "dexcom-share-api",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "files": [
     "dist"
   ],
@@ -13,7 +13,7 @@
       "require": "./dist/dexcom-share-api.umd.js"
     }
   },
-  "description": "API wrapper for interacting with the unofficial Dexcom share API",
+  "description": "Lightweight JS wrapper for the unofficial Dexcom share API. Useful if you need access to realtime glucose levels.",
   "author": "Elliot Dohm",
   "license": "MIT",
   "scripts": {
