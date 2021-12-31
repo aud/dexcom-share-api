@@ -1,4 +1,7 @@
-require("isomorphic-fetch");
+const fetch =
+  typeof window !== "undefined"
+    ? window.fetch
+    : require("isomorphic-fetch");
 
 import {extractNumber, mgdlToMmol} from "./utilities";
 import type {

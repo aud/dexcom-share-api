@@ -1,6 +1,6 @@
 {
   "name": "dexcom-share-api",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "files": [
     "dist"
   ],
@@ -34,6 +34,7 @@
     "@babel/preset-typescript": "^7.16.5",
     "@rollup/plugin-typescript": "^8.3.0",
     "@testing-library/jest-dom": "^5.16.1",
+    "@types/isomorphic-fetch": "^0.0.35",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-transform-vite-meta-env": "^1.0.3",
     "isomorphic-unfetch": "^3.1.0",
