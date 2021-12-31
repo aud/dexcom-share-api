@@ -18,7 +18,6 @@ module.exports = defineConfig({
           "rootDir": resolvePath("../src"),
           "declaration": true,
           "declarationDir": resolvePath("../dist"),
-          exclude: resolvePath("../node_modules/**"),
           allowSyntheticDefaultImports: true
         })
       ]

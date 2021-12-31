@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+require("isomorphic-fetch");
 
 import {extractNumber, mgdlToMmol} from "./utilities";
 import type {
