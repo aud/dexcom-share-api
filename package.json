@@ -1,6 +1,6 @@
 {
   "name": "dexcom-share-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "files": [
     "dist"
   ],
@@ -16,6 +16,15 @@
   "description": "Lightweight JS wrapper for the unofficial Dexcom share API. Useful if you need access to realtime glucose levels.",
   "author": "Elliot Dohm",
   "license": "MIT",
+  "keywords": [
+    "dexcom",
+    "dexcom api",
+    "share api",
+    "shareous",
+    "shareous1",
+    "share1",
+    "share2"
+  ],
   "scripts": {
     "build": "tsc && vite build",
     "test": "jest --no-coverage"
