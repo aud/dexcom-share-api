@@ -1,4 +1,4 @@
-![CI status](https://github.com/aud/dexcom-api/actions/workflows/ci.yml/badge.svg)
+![CI status](https://github.com/aud/dexcom-share-api/actions/workflows/ci.yml/badge.svg)
 
 Lightweight JavaScript (incl. TypeScript support) wrapper for interacting with
 the Dexcom private API. This API is most commonly used for extracting realtime
@@ -11,7 +11,7 @@ open an issue or PR and I'll try to add support ASAP.
 Usage:
 
 ```typescript
-import {DexcomClient} from "dexcom-api";
+import {DexcomClient} from "dexcom-share-api";
 
 // initialization
 const client = new DexcomClient({

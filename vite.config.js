@@ -9,7 +9,7 @@ module.exports = defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "DexcomApi",
-      fileName: (format) => `dexcom-api.${format}.js`
+      fileName: (format) => `dexcom-share-api.${format}.js`
     },
     rollupOptions: {
       plugins: [

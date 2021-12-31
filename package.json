@@ -1,19 +1,19 @@
 {
-  "name": "dexcom-api",
+  "name": "dexcom-share-api",
   "version": "1.0.0",
   "files": [
     "dist"
   ],
-  "main": "./dist/dexcom-api.umd.js",
-  "module": "./dist/dexcom-api.es.js",
+  "main": "./dist/dexcom-share-api.umd.js",
+  "module": "./dist/dexcom-share-api.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/dexcom-api.es.js",
-      "require": "./dist/dexcom-api.umd.js"
+      "import": "./dist/dexcom-share-api.es.js",
+      "require": "./dist/dexcom-share-api.umd.js"
     }
   },
-  "description": "API wrapper for interacting with the unofficial Dexcom API",
+  "description": "API wrapper for interacting with the unofficial Dexcom share API",
   "author": "Elliot Dohm",
   "license": "MIT",
   "scripts": {
@@ -37,10 +37,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aud/dexcom-api.git"
+    "url": "git+https://github.com/aud/dexcom-share-api.git"
   },
   "bugs": {
-    "url": "https://github.com/aud/dexcom-api/issues"
+    "url": "https://github.com/aud/dexcom-share-api/issues"
   },
-  "homepage": "https://github.com/aud/dexcom-api#readme"
+  "homepage": "https://github.com/aud/dexcom-share-api#readme"
 }
