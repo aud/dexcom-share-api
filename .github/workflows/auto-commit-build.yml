@@ -36,13 +36,17 @@ jobs:
           echo "Adding dist"
           git add -f dist/dexcom-share-api.es.js dist/dexcom-share-api.umd.js
 
-          git status
+          changed_count=$(git status | grep "modified:" | wc -l)
 
-          echo "Committing.."
-          git commit -m "<auto-committer> Update dist"
+          if [ "$changed_count" -ge 1 ]; then
+            echo "Committing.."
+            git commit -m "<auto-committer> Update dist"
 
-          echo "Pushing.."
-          git push -f origin HEAD:main
+            echo "Pushing.."
+            git push -f origin HEAD:main
+          else
+            echo "Skipping push, no files changed"
+          fi
         else
           echo "Yarn test failed"
           echo "Aborting"
