@@ -28,7 +28,7 @@ jobs:
             exit 1
           fi
 
-          git add dist/dexcom-share-api.es.js dist/dexcom-share-api.umd.js
+          git add -f dist/dexcom-share-api.es.js dist/dexcom-share-api.umd.js
           git commit -m "<auto-committer> Update dist"
           git push -u origin main
         else
