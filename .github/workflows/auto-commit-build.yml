@@ -33,7 +33,7 @@ jobs:
 
           git add -f dist/dexcom-share-api.es.js dist/dexcom-share-api.umd.js
           git commit -m "<auto-committer> Update dist"
-          git push -u origin main
+          git push origin HEAD:main
         else
           echo "Yarn test failed"
           echo "Aborting"
