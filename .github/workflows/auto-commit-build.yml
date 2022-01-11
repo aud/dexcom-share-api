@@ -23,6 +23,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build dist
       run: |
+        yarn
         yarn build
         echo "built"
         ls /dist
