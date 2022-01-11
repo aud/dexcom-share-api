@@ -26,4 +26,4 @@ jobs:
         yarn
         yarn build
         echo "built"
-        ls /dist
+        ls dist
