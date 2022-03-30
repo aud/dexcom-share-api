@@ -6,7 +6,7 @@ Lightweight JavaScript (incl. TypeScript support) wrapper for interacting with
 the Dexcom private API. This API is most commonly used for extracting realtime
 glucose data, as the official Dexcom API does not provide a realtime API.
 
-Caution: In beta, use at your own risk. This is unsupported by Dexcom and may
+Caution: This is unsupported by Dexcom and may
 break in the future. If this is missing support for an API that you use, please
 open an issue or PR and I'll try to add support ASAP.
 
