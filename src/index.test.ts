@@ -9,6 +9,7 @@ describe("DexcomClient", () => {
     it("validates initialization options", () => {
       // @ts-expect-error
       expect(() => new DexcomClient({})).toThrowError("Must provide username");
+      expect(() => new DexcomClient()).toThrowError("Must provide username");
       expect(() => {
         // @ts-expect-error
         new DexcomClient({username: "user"})

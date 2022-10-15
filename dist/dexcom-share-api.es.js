@@ -17,7 +17,11 @@ var Trend;
 })(Trend || (Trend = {}));
 const fetch = typeof window !== "undefined" ? window.fetch : require("isomorphic-fetch");
 class DexcomClient {
-  constructor({ username, password, server }) {
+  constructor({ username, password, server } = {
+    username: void 0,
+    password: void 0,
+    server: void 0
+  }) {
     Object.defineProperty(this, "username", {
       enumerable: true,
       configurable: true,

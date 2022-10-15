@@ -29,7 +29,15 @@ export class DexcomClient {
     return ["eu", "us"];
   }
 
-  constructor({username, password, server}: ConfigurationProps) {
+  constructor({
+    username,
+    password,
+    server
+  }: ConfigurationProps = {
+    username: undefined,
+    password: undefined,
+    server: undefined,
+  }) {
     if (typeof username === "undefined") throw new Error("Must provide username");
     if (typeof password === "undefined") throw new Error("Must provide password");
     if (typeof server === "undefined") throw new Error("Must provide server");

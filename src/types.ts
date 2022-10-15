@@ -2,9 +2,9 @@
 export type DexcomServer = "eu" | "us";
 
 export interface ConfigurationProps {
-  username: string;
-  password: string;
-  server: DexcomServer;
+  username: string | undefined;
+  password: string | undefined;
+  server: DexcomServer | undefined;
 }
 
 export interface LatestGlucoseProps {
