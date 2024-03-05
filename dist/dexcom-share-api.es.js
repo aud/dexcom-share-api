@@ -17,6 +17,12 @@ var Trend;
 })(Trend || (Trend = {}));
 const fetch = typeof window !== "undefined" ? window.fetch : require("isomorphic-fetch");
 class DexcomClient {
+  static get APPLICATION_ID() {
+    return "d8665ade-9673-4e27-9ff6-92db4ce13d13";
+  }
+  static get DEXCOM_SERVERS() {
+    return ["eu", "us"];
+  }
   constructor({ username, password, server } = {
     username: void 0,
     password: void 0,
@@ -52,12 +58,6 @@ class DexcomClient {
     this.username = username;
     this.password = password;
     this.server = server;
-  }
-  static get APPLICATION_ID() {
-    return "d8665ade-9673-4e27-9ff6-92db4ce13d13";
-  }
-  static get DEXCOM_SERVERS() {
-    return ["eu", "us"];
   }
   async getAccountId() {
     try {
@@ -131,7 +131,7 @@ class DexcomClient {
           mmol: mgdlToMmol(entry.Value),
           mgdl: entry.Value,
           trend: trend.toLowerCase(),
-          timestamp: new Date(extractNumber(entry.WT)).getTime()
+          timestamp: new Date(extractNumber(entry.WT)).toISOString()
         };
       });
     } catch (err) {

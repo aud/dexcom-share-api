@@ -158,7 +158,7 @@ export class DexcomClient {
           mmol: mgdlToMmol(entry.Value),
           mgdl: entry.Value,
           trend: trend.toLowerCase(),
-          timestamp: new Date(extractNumber(entry.WT) as number).getTime(),
+          timestamp: new Date(extractNumber(entry.WT) as number).toISOString(),
         }
       });
     } catch(err) {

@@ -183,7 +183,7 @@ describe("DexcomClient", () => {
         {
           mgdl: 185,
           mmol: 10.28,
-          timestamp: 1640812425000,
+          timestamp: "2021-12-29T21:13:45.000Z",
           trend: "flat",
         }
       ]
@@ -270,7 +270,7 @@ describe("DexcomClient", () => {
         {
           mgdl: 185,
           mmol: 10.28,
-          timestamp: 1640812425000,
+          timestamp: "2021-12-29T21:13:45.000Z",
           trend: "doubleup",
         }
       ]
